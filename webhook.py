@@ -39,8 +39,8 @@ def processRequest(req):
 
     speech = "The Forecast For "+city+" for "+date+" is "+condition
     return {
-        "speech": speech,
-        "displayText": speech,
+        "fulfillmentText": speech,
+        "text": speech,
         "source": "dialogflow-weather"
         }
 

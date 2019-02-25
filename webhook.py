@@ -33,9 +33,7 @@ def processRequest(req):
 
     json_object = r.json()
     weather= json_object['list']
-    for i in weather['description']:
-        condition = description[0]
-        return condition
+    condition = weather['description']
 
     speech = "The Forecast For "+city+" for "+date+" is "+condition
     return {"fulfillmentText": speech }

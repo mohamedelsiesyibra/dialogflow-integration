@@ -24,10 +24,10 @@ def webhook():
 #processing the request from dialogflow
 def processRequest(req):
     
-    result = req.get("result")
+    result = req.get("queryResult")
     parameters = result.get("parameters")
     city = parameters.get("geo-city")
-    date = parameters.get("data")
+    date = parameters.get("date")
 
     r = requests.get('https://samples.openweathermap.org/data/2.5/forecast?q='+city+',us&appid=b6907d289e10d714a6e88b30761fae22')  
 

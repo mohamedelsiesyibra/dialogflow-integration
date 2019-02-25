@@ -38,11 +38,7 @@ def processRequest(req):
             condition= weather[i]['weather'][0]['description']
 
     speech = "The Forecast For "+city+" for "+date+" is "+condition
-    return {
-        "fulfillmentText": speech,
-        "text": speech,
-        "source": "dialogflow-weather"
-        }
+    return {"fulfillmentText": speech }
 
 
 if __name__ == '__main__':

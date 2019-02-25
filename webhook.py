@@ -29,7 +29,7 @@ def processRequest(req):
     city = parameters.get("geo-city")
     date = parameters.get("data")
 
-    r = requests.get('https://samples.openweathermap.org/data/2.5/forecast?q='city',us&appid=b6907d289e10d714a6e88b30761fae22')  
+    r = requests.get('https://samples.openweathermap.org/data/2.5/forecast?q='+city+',us&appid=b6907d289e10d714a6e88b30761fae22')  
 
     json_object = r.json()
     weather= json_object['list']

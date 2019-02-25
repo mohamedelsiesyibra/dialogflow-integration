@@ -1,1 +1,1 @@
-web: python weatherapiwebhook.py
+web: python webhook.py
